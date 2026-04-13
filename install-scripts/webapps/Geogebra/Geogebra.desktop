@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Geogebra
+Comment=Geogebra
+Exec=omarchy-launch-webapp https://www.geogebra.org/classic
+Terminal=false
+Type=Application
+Icon=/home/simfli/.local/share/applications/icons/Geogebra.png
+StartupNotify=true

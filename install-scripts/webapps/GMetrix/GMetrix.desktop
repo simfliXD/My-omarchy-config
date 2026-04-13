@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=GMetrix
+Comment=GMetrix
+Exec=omarchy-launch-webapp https://www.gmetrix.net/Login.aspx
+Terminal=false
+Type=Application
+Icon=/home/simfli/.local/share/applications/icons/GMetrix.png
+StartupNotify=true

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Google Classroom
+Comment=Google Classroom
+Exec=omarchy-launch-webapp https://classroom.google.com
+Terminal=false
+Type=Application
+Icon=/home/simfli/.local/share/applications/icons/Google Classroom.png
+StartupNotify=true

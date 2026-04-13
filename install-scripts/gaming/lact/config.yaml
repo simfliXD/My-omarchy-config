@@ -1,0 +1,32 @@
+version: 5
+daemon:
+  log_level: info
+  admin_group: wheel
+  disable_clocks_cleanup: false
+apply_settings_timer: 5
+gpus:
+  1002:73EF-1043:05E3-0000:08:00.0:
+    fan_control_enabled: false
+    power_cap: 165.0
+    performance_level: auto
+profiles:
+  OC + UV:
+    gpus:
+      1002:73EF-1043:05E3-0000:08:00.0:
+        fan_control_enabled: false
+        power_cap: 165.0
+        performance_level: high
+        min_core_clock: 2850
+        max_core_clock: 2950
+        max_memory_clock: 1185
+        voltage_offset: -95
+    rule:
+      type: or
+      filter:
+        - type: gamemode
+          filter: null
+        - type: process
+          filter:
+            name: lm-studio
+current_profile: null
+auto_switch_profiles: true
