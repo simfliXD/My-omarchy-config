@@ -2,7 +2,7 @@
 # Exit immediately if a command exits with a non-zero status
 set -euo pipefail
 
-# Check for required tools
+# Check if yay (Yet Another Yogurt) is installed
 if ! command -v yay &> /dev/null; then
     echo "Error: yay not found. Please install yay first." >&2
     exit 1

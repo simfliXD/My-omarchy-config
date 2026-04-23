@@ -16,3 +16,9 @@ echo "Installing nice to haves ..."
 
 # TLP for battery optimization on laptops
 #. ./install-scripts/nice-to-have/tlp.sh # disabled for now due to conflicts with auto-cpufreq
+
+# Gimp
+. "$NICETOHAVE_SCRIPT_DIR/install-scripts/nice-to-have/gimp.sh"
+
+# Davinci Resolve
+. "$NICETOHAVE_SCRIPT_DIR/install-scripts/nice-to-have/davinchi-resolve.sh"

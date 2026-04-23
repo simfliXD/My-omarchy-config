@@ -68,5 +68,3 @@ log_info "Setting theme back to Tokyo Night"
 omarchy-theme-set Tokyo-Night
 
 log_success "Theme update completed."
-Setting theme back to Tokyo Night
-Theme 'tokyo-night' does not exist

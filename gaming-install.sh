@@ -28,3 +28,6 @@ echo "Setting things up for optimal gaming ..."
 
 # Install Zen Kernel
 . ./install-scripts/gaming/zen-kernel.sh
+
+# Install Valve VRAM patch
+. ./install-scripts/gaming/valve-vram-patch.sh

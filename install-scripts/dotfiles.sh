@@ -10,5 +10,5 @@ sudo pacman -S --noconfirm --needed stow
 cd "$HOME"/dotfiles
 
 # Stow the dotfiles for the desired applications
-stow hypr spotifyd themes uwsm waybar
+stow *
 echo "dotfiles stowed to $HOME/dotfiles."

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # password manager
-. ./Password-manager/install-password-manager.sh
+. ./install-scripts/bitwarden.sh
 
 # My hyperland setup
 #. ./hypr/install-hyperland-overrides.sh
@@ -14,9 +14,6 @@
 
 # Wine compatibility layer for running Windows applications
 . ./install-scripts/Wine.sh
-
-# Windows applications management via Bottles
-. ./install-scripts/Bottles.sh
 
 #echo "Installing Native DXVK ..." # already included in bottles but this gives sysytem-wide DXVK support
 #. ./install-scripts/Native-DXVK.sh
