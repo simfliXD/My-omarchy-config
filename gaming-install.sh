@@ -8,9 +8,6 @@ echo "Setting things up for optimal gaming ..."
 # Install Gamescope
 . ./install-scripts/gaming/gamescope.sh
 
-# Install latest verion of GE-Proton for steam
-. ./install-scripts/gaming/GE-proton/ge-proton-updater.sh
-
 # Install steam compatibility config
 . ./install-scripts/gaming/steamcompatability/install-gamecompatability.sh
 

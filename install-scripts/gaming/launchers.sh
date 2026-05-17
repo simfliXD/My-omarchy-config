@@ -7,7 +7,8 @@ source "${SCRIPT_DIR}/../common.sh"
 section "Installing Game Launchers"
 
 log_info "Installing Steam..."
-sudo pacman -S --noconfirm --needed steam
+yay -S --noconfirm --needed steam
+
 if command -v steam >/dev/null 2>&1; then
   log_success "Steam installed successfully."
 else
@@ -17,6 +18,7 @@ fi
 
 log_info "Installing Faugus Launcher..."
 yay -S --noconfirm --needed faugus-launcher
+
 if command -v faugus-launcher >/dev/null 2>&1; then
   log_success "Faugus Launcher installed successfully."
 else
@@ -26,6 +28,7 @@ fi
 
 log_info "Installing ATlauncher (Minecraft launcher)..."
 yay -S --noconfirm --needed atlauncher-bin
+
 if command -v atlauncher >/dev/null 2>&1; then
   log_success "ATlauncher installed successfully."
 else

@@ -22,8 +22,8 @@
 # VPN client for accesing my services
 bash ./install-scripts/tailscale.sh
 
-# Visual Studio Code installation
-. ./install-scripts/vscode.sh
+# Code Editors installation
+. ./install-scripts/code-editors.sh
 
 # Webapps
 . ./install-scripts/webapps/install-webapps.sh
