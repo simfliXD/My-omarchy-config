@@ -1,11 +1,23 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-echo "Removing 1Password ..."
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/install-scripts/common.sh"
+
+
+section "Removing useless stuff ..."
+
+info "Removing 1Password ..."
 yay -Rns --noconfirm $(yay -Qq 1password 1password-cli 1password-beta 2>/dev/null) 2>/dev/null || true
-echo "1Password removed successfully."
+success "1Password removed successfully."
 
-echo "Removing basecamp ..."
+info "Removing basecamp ..."
 omarchy-webapp-remove Basecamp
 
-echo "Removing Zoom ..."
+info "Removing Zoom ..."
 omarchy-webapp-remove Zoom
+
+info "Removing cliamp ..."
+yay -Rns --noconfirm $(yay -Qq cliamp 2>/dev/null) 2>/dev/null || true
+
+success "Removed everything successfully."
