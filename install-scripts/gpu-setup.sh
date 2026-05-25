@@ -4,10 +4,6 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "${SCRIPT_DIR}/common.sh"
 
-# Run script with sudo
-if [[ $EUID -ne 0 ]]; then
-  exec sudo HOME="$HOME" "$0" "$@"
-fi
 
 section "Setting up GPU drivers..."
 
@@ -17,7 +13,7 @@ section "Setting up GPU drivers..."
 SNAP_ID="N/A"
 if snapper list-configs &>/dev/null; then
   log_info "Creating Snapper pre-install snapshot..."
-  SNAP_ID=$(snapper create --description "Pre GPU & power driver install" --print-number)
+  SNAP_ID=$(sudo snapper create --description "Pre GPU & power driver install" --print-number)
   log_success "Snapshot created: $SNAP_ID"
 fi
 
@@ -80,7 +76,7 @@ fi
 ########################################
 echo
 log_info "Installing base graphics stack..."
- pacman -Syu --noconfirm --needed \
+ yay -Syu --noconfirm --needed \
   mesa \
   lib32-mesa \
   mesa-utils \
@@ -96,7 +92,7 @@ log_info "Installing base graphics stack..."
 ########################################
 if $HAS_INTEL; then
   log_info "Installing Intel GPU drivers..."
-   pacman -S --noconfirm --needed \
+   yay -S --noconfirm --needed \
    vulkan-intel \
    lib32-vulkan-intel \
    intel-media-driver \
@@ -109,14 +105,14 @@ fi
 ########################################
 if $HAS_AMD; then
   log_info "Installing AMD GPU drivers..."
-   pacman -S --noconfirm --needed \
+   yay -S --noconfirm --needed \
     vulkan-radeon \
     lib32-vulkan-radeon \
     glu \
     lib32-glu
   
   log_info "Installing AMD system monitoring tools..."
-   pacman -S --noconfirm --needed amdsmi rocm-smi-lib
+   yay -S --noconfirm --needed amdsmi rocm-smi-lib
 fi
 
 ########################################
@@ -135,7 +131,7 @@ fi
 
 if $HAS_NVIDIA; then
   log_info "Installing NVIDIA drivers (nvidia-open)..."
-   pacman -S --noconfirm --needed \
+   yay -S --noconfirm --needed \
     nvidia-open \
     nvidia-settings \
     nvidia-utils \
@@ -188,4 +184,4 @@ echo
 log_success "Setup complete!"
 log_warn "⚠️  REBOOT REQUIRED for everything to take full effect."
 log_info "Rollback snapshot: $SNAP_ID"
-wait 2
+sleep 2

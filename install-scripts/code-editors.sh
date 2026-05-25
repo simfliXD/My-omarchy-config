@@ -19,9 +19,4 @@ else
   exit 1
 fi
 
-if command -v zed >/dev/null 2>&1; then
-  log_success "Zed installation completed!"
-else
-  log_error "Zed installation failed."
-  exit 1
-fi
+
