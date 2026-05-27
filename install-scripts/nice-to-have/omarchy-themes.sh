@@ -23,6 +23,7 @@ THEME_REPOS=(
   https://github.com/catlee/omarchy-dracula-theme
   https://github.com/bjarneo/omarchy-futurism-theme
   https://github.com/sc0ttman/omarchy-one-dark-pro-theme
+  https://github.com/HANCORE-linux/omarchy-whitegold-theme.git
 )
 
 normalize_name() {
