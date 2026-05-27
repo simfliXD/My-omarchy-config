@@ -42,7 +42,7 @@ repo_to_theme_name() {
 
 section "Installing Omarchy themes"
 log_info "Fetching installed theme list..."
-INSTALLED_THEMES="$(omarchy-theme-list)"
+INSTALLED_THEMES="$(omarchy theme list)"
 
 NORMALIZED_INSTALLED_THEMES="$(printf '%s\n' "$INSTALLED_THEMES" | while IFS= read -r LINE; do normalize_name "$LINE"; done)"
 
@@ -55,16 +55,16 @@ for REPO in "${THEME_REPOS[@]}"; do
     log_success "Already installed: $NAME"
   else
     log_info "Installing: $NAME"
-    omarchy-theme-install "$REPO" &
+    omarchy theme install "$REPO" &
   fi
 done
 
 wait
 
 log_info "Updating all themes..."
-omarchy-theme-update
+omarchy theme update
 
 log_info "Setting theme back to Tokyo Night"
-omarchy-theme-set Tokyo-Night
+omarchy theme set Tokyo-Night
 
 log_success "Theme update completed."

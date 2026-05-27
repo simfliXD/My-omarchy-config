@@ -38,6 +38,23 @@ log_error() {
     printf "%b\n" "${COLOR_ERROR}ERROR:${COLOR_RESET} ${*}" >&2
 }
 
+# Backwards-compatible aliases for older scripts.
+info() {
+    log_info "$@"
+}
+
+success() {
+    log_success "$@"
+}
+
+warn() {
+    log_warn "$@"
+}
+
+error() {
+    log_error "$@"
+}
+
 section() {
     printf "%b\n\n" "${COLOR_BOLD}${COLOR_INFO}==> ${*}${COLOR_RESET}"
 }
