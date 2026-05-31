@@ -13,6 +13,9 @@ success "1Password removed successfully."
 info "Removing basecamp ..."
 omarchy webapp remove Basecamp
 
+info "Removing Fizzy ..."
+omarchy webapp remove Fizzy
+
 info "Removing Zoom ..."
 omarchy webapp remove Zoom
 

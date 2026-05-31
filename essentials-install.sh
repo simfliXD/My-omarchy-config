@@ -30,3 +30,6 @@ bash ./install-scripts/tailscale.sh
 
 # Browser
 . ./install-scripts/browser.sh
+
+# Email Client
+. ./install-scripts/email-client.sh
