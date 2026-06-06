@@ -19,6 +19,15 @@ omarchy webapp remove Fizzy
 info "Removing Zoom ..."
 omarchy webapp remove Zoom
 
+info "Removing Discord web application ..."
+omarchy webapp remove Discord
+
+info "Removing HEY ..."
+omarchy webapp remove HEY
+
+info "Removing Figma ..."
+omarchy webapp remove Figma
+
 info "Removing cliamp ..."
 yay -Rns --noconfirm $(yay -Qq cliamp 2>/dev/null) 2>/dev/null || true
 
