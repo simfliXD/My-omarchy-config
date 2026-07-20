@@ -22,3 +22,5 @@ echo "Installing nice to haves ..."
 
 # Davinci Resolve
 . "$NICETOHAVE_SCRIPT_DIR/install-scripts/nice-to-have/davinchi-resolve.sh"
+# ONLYOFFICE
+. "$NICETOHAVE_SCRIPT_DIR/install-scripts/nice-to-have/onlyoffice.sh"
