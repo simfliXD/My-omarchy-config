@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Spotatui
+GenericName=Music Player
+Comment=Fast Image Viewer
+Icon=spotify-client
+Exec=omarchy-launch-or-focus-tui spotatui
+Terminal=true
+Categories=Audio;Music;Player;Radio;
+MimeType=x-scheme-handler/spotify;
+Keywords=music;radio;s

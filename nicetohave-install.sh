@@ -6,7 +6,7 @@ NICETOHAVE_SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 echo "Installing nice to haves ..."
 
 # Lightweight spotify client
-. "$NICETOHAVE_SCRIPT_DIR/install-scripts/nice-to-have/lightweight-spotify.sh"
+. "$NICETOHAVE_SCRIPT_DIR/install-scripts/nice-to-have/spotatui/lightweight-spotify.sh"
 
 # Omarchy themes
 . "$NICETOHAVE_SCRIPT_DIR/install-scripts/nice-to-have/omarchy-themes.sh"
